@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/vehicle_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/wallpaper"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <ScrollView
+        android:id="@+id/data_scroll"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_gravity="top"
+        android:layout_margin="10dp"
+        android:elevation="2dp"
+        android:outlineProvider="bounds"
+        android:visibility="invisible">
+
+        <TableLayout
+            android:id="@+id/data_table"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*"></TableLayout>
+    </ScrollView>
+
+    <TableRow
+        android:id="@+id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:padding="5dp">
+
+
+        <ImageView
+            android:id="@+id/obd"
+            android:layout_width="110dp"
+            android:layout_height="90dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/engine1" />
+
+        <TableRow
+            android:id="@+id/status"
+            android:layout_width="180dp"
+            android:layout_height="100dp"
+            android:padding="5dp">
+
+
+            <TextView
+                android:id="@+id/OBD_STATUS"
+                android:layout_width="25dp"
+                android:layout_height="90dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+
+
+            <TextView
+                android:id="@+id/BT_STATUS"
+                android:layout_width="10dp"
+                android:layout_height="90dp"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text=""
+                android:textSize="15dp" />
+
+
+        </TableRow>
+
+
+        <ImageView
+            android:id="@+id/bluetooth"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_weight="0.1"
+            android:background="@drawable/symbols" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/bobd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:text="@string/text_obd"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:text="@string/text_bluetooth"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:textStyle="bold" />
+
+
+    </TableRow>
+
+    <TableRow
+
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+
+
+
+    </TableRow>
+
+
+    <TableRow
+        android:id="@+id/hi"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <TableRow
+            android:id="@+id/compass"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:padding="5dp">
+
+            <ImageView
+                android:id="@+id/bussola"
+                android:layout_width="110dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.00"
+                android:background="@drawable/bussola" />
+
+            <TextView
+                android:id="@+id/compass_text"
+                android:layout_width="120dp"
+                android:layout_height="70dp"
+                android:layout_weight="2"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:text="@string/text_orientation_default"
+                android:textSize="25dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/km"
+            android:layout_width="fill_parent"
+            android:layout_height="70dp"
+            android:padding="5dp">
+
+
+            <TextView
+                android:id="@+id/textkm"
+                android:layout_width="0dp"
+                android:layout_height="70dp"
+                android:layout_weight="2"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:tag="SPEED"
+                android:text="@string/text_zero"
+                android:textSize="35dp" />
+
+
+
+            <ImageView
+                android:id="@+id/contakm"
+                android:layout_width="30dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.00"
+                android:background="@drawable/tachimetro" />
+
+
+        </TableRow>
+
+    </TableRow>
+
+    <TableRow
+
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+
+
+
+    </TableRow>
+
+
+    <TableRow
+        android:id="@+id/giri1"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:nestedScrollingEnabled="true"
+        android:padding="5dp">
+
+        <TableRow
+            android:id="@+id/giri"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:nestedScrollingEnabled="true"
+            android:padding="5dp">
+
+
+
+            <ImageView
+                android:id="@+id/rpm"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/rpm" />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:tag="ENGINE_RPM"
+                android:text=""
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/fuel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:tag="FUEL_CONSUMPTION"
+                android:text="@string/text_consumption_default"
+                android:textIsSelectable="false"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+
+
+            <ImageView
+                android:id="@+id/fuel1"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/gas" />
+
+
+        </TableRow>
+    </TableRow>
+
+    <TableRow
+
+        android:id="@+id/button12"
+        android:layout_width="match_parent"
+        android:layout_height="25dp">
+
+
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/play"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonplay"
+            android:onClick="start" />
+
+        <Button
+            android:id="@+id/avanti"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:background="@drawable/log"
+            android:onClick="OBDCommand"/>
+        <Button
+            android:id="@+id/maps"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:background="@drawable/maps"
+            android:onClick="OpenMaps" />
+
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonstop"
+            android:onClick="stop" />
+
+
+    </TableRow>
+
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+</LinearLayout>
